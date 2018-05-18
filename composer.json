@@ -1,0 +1,44 @@
+{
+  "name": "angelo/my-sms",
+  "type": "library",
+
+  "description": "Test",
+  "keywords": [
+    "angelo",
+    "mysms"
+  ],
+
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Angelo",
+      "email": "moesat68@googlemail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.1",
+    "guzzlehttp/guzzle": "^6.2",
+    "illuminate/support": "~5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "angelo\\MySms\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "angelo\\MySms\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "angelo\\MySms\\SmsServiceProvider"
+      ],
+      "aliases": {
+        "MySmsFacade": "angelo\\MySms\\Facade\\SmsServiceFacade"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
